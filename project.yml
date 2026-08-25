@@ -1,0 +1,31 @@
+name: PhotoTinder
+options:
+  bundleIdPrefix: com.phototinder.app
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  PhotoTinder:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: PhotoTinder
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        NSPhotoLibraryUsageDescription: "L'app a besoin d'accéder à tes photos pour te proposer de les trier."
+        NSPhotoLibraryAddUsageDescription: "Non utilisé mais requis par iOS."
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.phototinder.app
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
